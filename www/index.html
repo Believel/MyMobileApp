@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/account/account.css">
+    <link rel="stylesheet" href="css/cart/cart.css">
+    <link rel="stylesheet" href="css/category/category.css">  
+    <link rel="stylesheet" href="css/details/details.css">
+    <link rel="stylesheet" href="css/goodsList/goodsList.css">
+    <link rel="stylesheet" href="css/guidePage/guidePage.css">
+    <link rel="stylesheet" href="css/home/home.css">
+    <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="lib/swiper/dist/css/swiper.css">
+  <script src="lib/swiper/dist/js/swiper.js"></script>
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!-- 这个文件是用来帮助我们调用硬件的,当我们执行build命令时会自动创建该文件把它添加进去. -->
+    <script src="cordova.js"></script>
+    <script>
+      // alert('哈哈')
+    </script>
+  </head>
+
+  <body ng-app="starter">  
+    <!-- <ui-view></ ui-view> -->
+    <!-- 这个其实就是对ui-view的封装 -->
+    <!-- 指令, 模块控制器，服务, -->
+    <!-- 是通过angular的自定义指令去实现的 -->
+    <ion-nav-view></ion-nav-view>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/route.js"></script>
+    <script src="./modules/home/homeRoute.js"></script>
+    <script src="./modules/home/homeController.js"></script>
+    <script src="./modules/tab/tabRoute.js"></script>
+    <script src="./modules/category/categoryRoute.js"></script>
+    <script src="modules/category/categoryController.js"></script>
+    <script src="modules/category/categoryService.js"></script>
+    <script src="lib/ionic-image-lazy-load/ionic-image-lazy-load.js">
+    </script>
+    <script src="modules/goodsList/goodsController.js"></script>
+    <script src="modules/goodsList/goodsListRoute.js"></script>
+    <script src="modules/goodsList/goodsListService.js"></script>
+
+    <script src="modules/account/accountController.js"></script>
+    <script src="modules/account/accountRoute.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+  </body>
+</html>
