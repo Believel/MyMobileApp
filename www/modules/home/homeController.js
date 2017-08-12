@@ -2,12 +2,12 @@
 angular.module('home.controller', [])
  .controller('homeController',function(
   $scope,
-  $ionicPopup,
+  $ionicPopup, //弹出框
   $ionicModal,
   $ionicActionSheet,
   $interval // 类似setInterval
   ){
-
+ 
   // 1.初始化头部的滚动条(swiper),
   // 用id是因为页面可能有多个swiper
   
@@ -15,7 +15,7 @@ angular.module('home.controller', [])
   $scope.$on('$ionicView.enter',function(){
     // 注意，会有轮播图的dom结构未加载的情况
     new Swiper('#headerSlider',{
-      autoplay: 1000,//可选选项，自动滑动
+      autoplay: 3000,//可选选项，自动滑动
     })
 
     new Swiper('#toutiaoSlider',{
@@ -23,13 +23,15 @@ angular.module('home.controller', [])
       direction : 'vertical',// 表示垂直方向轮播.
     })
   })
-
+// 头部搜索框-背景颜色渐变
+  
+  
 
     killseconds()
   // miaosha // 掌上秒杀
   function killseconds(){
-      // 剩余时间
-      var timeLeft = {h:0, m: 0, s:3} // 1:3:0      1:0:0   0.0.0
+      // 剩余时间 
+      var timeLeft = {h:0, m: 1, s:3} // 1:3:0      1:0:0   0.0.0
       $scope.timeLeft = timeLeft
       // setInterval()
       var id = $interval(function(){
@@ -72,4 +74,6 @@ angular.module('home.controller', [])
     // 28/10 2.8
     return parseInt(num/10)
   }
+  // 回到顶部功能
+  
  })

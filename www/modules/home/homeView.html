@@ -54,7 +54,7 @@
         <h2>物流查询</h2>
       </span>
       <span>
-        <img ng-src="img/home//nav2.png" alt="">
+        <img ng-src="img/home/nav2.png" alt="">
         <h2>购物车</h2>
       </span>
       <span>
@@ -106,7 +106,7 @@
       </ion-slide-box>
     </div>
 
-    <!-- 秒杀 -->s
+    <!-- 秒杀 -->
     <div id="centent">
       <div class="centent-top">
         <span></span>
@@ -114,7 +114,7 @@
         <div class="centent-time">
           <span class="time-text">{{getTen(timeLeft.h)}}</span>
           <span class="time-text">{{getNum(timeLeft.h)}}</span>
-          <span>:</span>
+          <span>:</span> 
           <span class="time-text">{{getTen(timeLeft.m)}}</span>
           <span class="time-text">{{getNum(timeLeft.m)}}</span>
           <span>:</span>
@@ -186,6 +186,6 @@
       </div>
     </div>
     <!--回到顶部的区块-->
-    <div class="back_top"></div>
+    <div class="back_top" ng-click="goToUP()"></div>
   </ion-content>
 </ion-view>
